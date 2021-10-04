@@ -61,10 +61,9 @@ public class Application {
     * 숫자 형식 체크
     */
     public static Boolean chkNumberFormat(String numbers) {
-        try {
-            Integer.parseInt(numbers);
-        } catch (NumberFormatException e) {
-            System.out.println("[ERROR] 입력한 수가 숫자형식이 아닙니다.");
+        String regExp = "^[1-9]+$";
+        if(!numbers.matches(regExp)) {
+            System.out.println("[ERROR] 1부터 9까지의 숫자가 아닙니다.");
             return false;
         }
         return true;
