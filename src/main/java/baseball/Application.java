@@ -40,7 +40,7 @@ public class Application {
         // - 사용자가 다른 값을 입력한 경우 재선택 메시지를 출력한다.
     }
 
-    /*
+    /**
     *   사용자 세자리 숫자 받기
     */
     public static String getUserInputString() {
@@ -52,9 +52,15 @@ public class Application {
     * 사용자가 입력한 값 체크
     */
     public static Boolean chkUserNumbers(String numbers) {
-        if(!chkNumberFormat(numbers)) return false;
-        if(!chkNumberSize(numbers)) return false;
-        if(!chkNumberOverlap(numbers)) return false;
+        if(!chkNumberFormat(numbers)) {
+            return false;
+        }
+        if(!chkNumberSize(numbers)) {
+            return false;
+        }
+        if(!chkNumberOverlap(numbers)) {
+            return false;
+        }
         return true;
     }
     /**
