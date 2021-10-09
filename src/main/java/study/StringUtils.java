@@ -4,13 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringUtils {
-    private final String str;
 
-    public StringUtils(String str) {
-        this.str = str;
+
+    public static String[] split(String str, String separator) {
+        return str.split(separator);
     }
 
-    public String[] split(String separator) {
-        return str.split(separator);
+    public static String removeParentheses(String str) {
+        int leftPtIdx = str.indexOf("(");
+        if (leftPtIdx > -1) {
+            str = str.substring(leftPtIdx + 1);
+        }
+        int rightPtIdx = str.indexOf(")");
+        if (rightPtIdx > -1) {
+            str = str.substring(0, rightPtIdx);
+        }
+        return str;
     }
 }
