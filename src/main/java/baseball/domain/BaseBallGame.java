@@ -32,7 +32,7 @@ public class BaseBallGame {
     }
 
     /**
-     *   사용자 세자리 숫자 받기
+     * 사용자 세자리 숫자 받기
      */
     private String getUserInputString() {
         System.out.print("숫자를 입력해주세요 : ");
