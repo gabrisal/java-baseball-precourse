@@ -21,4 +21,8 @@ public class StringUtils {
         }
         return str;
     }
+
+    public static int chartAt(String str, int index) {
+        return str.charAt(index);
+    }
 }
